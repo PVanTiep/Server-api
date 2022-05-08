@@ -16,7 +16,7 @@ dotenv.config();
 //     {useNewUrlParser:true},
 //     {useUnifiedTopology: true},
 //     ()=>{console.log("Connected to database");
-//      hope
+//      hopeâ
 // });
 mongoose.connect('mongodb+srv://admin:0923028413@lab4-nhom13.j7xtk.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', {
     useNewUrlParser: true,
