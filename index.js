@@ -12,12 +12,23 @@ const ledRoute= require("./routes/led");
 
 dotenv.config();
 //Connect database
-mongoose.connect(('mongodb+srv://admin:0923028413@lab4-nhom13.j7xtk.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'),
-    {useNewUrlParser:true},
-    {useUnifiedTopology: true},
-    ()=>{console.log("Connected to database");
+// mongoose.connect(('mongodb+srv://admin:0923028413@lab4-nhom13.j7xtk.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'),
+//     {useNewUrlParser:true},
+//     {useUnifiedTopology: true},
+//     ()=>{console.log("Connected to database");
+// });
+mongoose.connect('mongodb+srv://admin:0923028413@lab4-nhom13.j7xtk.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', {
+    useNewUrlParser: true,
+    useCreateIndex: true,
+    useFindAndModify: false,
+    useUnifiedTopology: true,
+  })
+  .then(() => {
+    console.log('Database connected successfully!');
+  })
+  .catch((err) => {
+    console.log('Error connecting with error code:', err);
 });
-
 app.use(bodyParser.json({limit:"50mb"}));
 app.use(helmet());
 app.use(cors());
