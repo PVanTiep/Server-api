@@ -32,6 +32,10 @@ app.use(helmet());
 app.use(cors());
 app.use(morgan("common"));
 
+app.get("/",(req,res)=>{
+    res.status(200).json("Hi");
+})
+
 //routers
 app.use("/v1/data", dataRoute);
 app.use("/v1/device", deviceRoute);
