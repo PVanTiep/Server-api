@@ -12,7 +12,7 @@ const ledRoute= require("./routes/led");
 
 dotenv.config();
 //Connect database
-mongoose.connect((process.env.MONGODB_URL),
+mongoose.connect(('mongodb+srv://admin:0923028413@lab4-nhom13.j7xtk.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'),
     {useNewUrlParser:true},
     {useUnifiedTopology: true},
     ()=>{console.log("Connected to database");
