@@ -3,13 +3,23 @@ const mongoose = require("mongoose");
 const dataSchema = new mongoose.Schema({
     temperature:{
         type:String,
+        required:true
     },
     humidity:{
         type:String,
+        required:true
     },
     bringtness:{
-        type:String,
+        type:String,   
+        required:true
     },
+    device:[
+        {
+            name:String,
+            Id:String,
+            Ip:String
+        }
+    ],
 }, {timestamps:true}
 );
 
