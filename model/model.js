@@ -13,6 +13,13 @@ const dataSchema = new mongoose.Schema({
         type:String,   
         required:true
     },
+    led:[
+        {
+            "one": String,
+            "two": String,
+        }
+        
+    ]
 });
 
 const deviceSchema = new mongoose.Schema({
