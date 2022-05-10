@@ -8,7 +8,7 @@ const helmet = require("helmet");
 const dotenv = require("dotenv");
 const dataRoute= require("./routes/data");
 const deviceRoute= require("./routes/device");
-const ledRoute= require("./routes/led");
+const logRoute= require("./routes/log");
 
 dotenv.config();
 //Connect database
@@ -40,7 +40,7 @@ app.get("/",(req,res)=>{
 //routers
 app.use("/v1/data", dataRoute);
 app.use("/v1/device", deviceRoute);
-app.use("/v1/led", ledRoute);
+app.use("/v1/log", logRoute);
 const PORT = process.env.PORT || 8000;
 app.listen(PORT,()=>{
     console.log("Server is running...");

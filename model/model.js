@@ -13,15 +13,7 @@ const dataSchema = new mongoose.Schema({
         type:String,   
         required:true
     },
-    device:[
-        {
-            name:String,
-            Id:String,
-            Ip:String
-        }
-    ],
-}, {timestamps:true}
-);
+});
 
 const deviceSchema = new mongoose.Schema({
     name:{
@@ -33,17 +25,31 @@ const deviceSchema = new mongoose.Schema({
 }, {timestamps:true}
 );
 
-const ledSchema = new mongoose.Schema({
-    name:{
+const logSchema = new mongoose.Schema({
+    idDevice:{
         type:String,
+        required:true
     },
-    status:{
+    ipDevice:{
         type:String,
+        required:true
+    },
+    nameDevice:{
+        type:String,
+        required:true
+    },
+    nameSensor:{
+        type:String,
+        required:true
+    },
+    value:{
+        type:String,
+        required:true
     },
 }, {timestamps:true}
 );
 
 let Data = mongoose.model("Data", dataSchema);
 let Device = mongoose.model("Device", deviceSchema);
-let Led = mongoose.model("Led", deviceSchema);
-module.exports={Data,Device,Led};
+let Log = mongoose.model("Log", logSchema);
+module.exports={Data,Device,Log};
