@@ -32,7 +32,8 @@ const DeviceController = {
         try {
           const device = await Device.findById(req.params.id);
           await device.updateOne({ $set: req.body });
-          res.status(200).json("Updated successfully!");
+          const device2 = await Device.findById(req.params.id);
+          res.status(200).json(device2);
         } catch (err) {
           res.status(500).json(err);
         }

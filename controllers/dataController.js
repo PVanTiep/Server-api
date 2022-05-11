@@ -32,7 +32,8 @@ const dataController = {
         try {
           const data = await Data.findById(req.params.id);
           await data.updateOne({ $set: req.body });
-          res.status(200).json("Updated successfully!");
+          const data2 = await Data.findById(req.params.id);
+          res.status(200).json(data2);
         } catch (err) {
           res.status(500).json(err);
         }

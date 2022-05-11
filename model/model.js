@@ -9,7 +9,7 @@ const dataSchema = new mongoose.Schema({
         type:String,
         required:true
     },
-    bringtness:{
+    light:{
         type:String,   
         required:true
     },

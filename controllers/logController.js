@@ -32,7 +32,8 @@ const LogController = {
         try {
           const log = await Log.findById(req.params.id);
           await log.updateOne({ $set: req.body });
-          res.status(200).json("Updated successfully!");
+          const log2 = await Log.findById(req.params.id);
+          res.status(200).json(log2);
         } catch (err) {
           res.status(500).json(err);
         }
