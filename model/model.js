@@ -19,7 +19,15 @@ const dataSchema = new mongoose.Schema({
             "two": String,
         }
         
-    ]
+    ],
+    timelight:{
+        type:String,
+        required:true
+    },
+    timehumtemp:{
+        type:String,
+        required:true
+    }
 }, {timestamps:true}
 );
 
