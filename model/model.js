@@ -20,7 +20,8 @@ const dataSchema = new mongoose.Schema({
         }
         
     ]
-});
+}, {timestamps:true}
+);
 
 const deviceSchema = new mongoose.Schema({
     name:{
