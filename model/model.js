@@ -9,23 +9,8 @@ const dataSchema = new mongoose.Schema({
         type:String,
         required:true
     },
-    light:{
+    detect:{
         type:String,   
-        required:true
-    },
-    led:[
-        {
-            "one": String,
-            "two": String,
-        }
-        
-    ],
-    timelight:{
-        type:String,
-        required:true
-    },
-    timehumtemp:{
-        type:String,
         required:true
     }
 }, {timestamps:true}
@@ -42,23 +27,19 @@ const deviceSchema = new mongoose.Schema({
 );
 
 const logSchema = new mongoose.Schema({
-    idDevice:{
+    area:{
         type:String,
         required:true
     },
-    ipDevice:{
+    temperature:{
         type:String,
         required:true
     },
-    nameDevice:{
+    humidity:{
         type:String,
         required:true
     },
-    nameSensor:{
-        type:String,
-        required:true
-    },
-    value:{
+    detect:{
         type:String,
         required:true
     },
