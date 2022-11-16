@@ -10,7 +10,6 @@
      __v: 0<br />
      }<br />
 - Logs: https://lab3-iot-nodejs.herokuapp.com/v1/data
-
      {<br />
      _id: "62a32fd32e2af3c7e39ab296",<br />
      area: "khu vuc A",<br />
